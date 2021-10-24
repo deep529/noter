@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+</head>
+
+<body>
+    <center>
+        <p id="notice"><img src="\images\info.png" style="margin-left: 95%;" height="30px"></p>
+        <form id="add_form">
+            <div class="form-row align-items-center">
+                <div class="col-sm-5 my-1">
+                    <input type="text" class="form-control" placeholder="Description" id="key">
+                </div>
+                <div class="col-sm-5 my-1">
+                    <input type="text" class="form-control" placeholder="Content" id="data">
+                </div>
+                <div class="col-auto my-1">
+                    <button type="button" class="btn btn-primary" onclick="addNew()" id="add_button">Add</button>
+                </div>
+            </div>
+        </form>
+
+        <table id="main-table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th width="40%" scope="col">Description</th>
+                    <th width="60%" scope="col">Content</th>
+                </tr>
+            </thead>
+            <tbody id="main-tbody">
+            </tbody>
+        </table>
+    </center>
+
+    <textarea class="hiddenTextArea-class" id="hiddenTextArea-id"></textarea>
+    
+    <script src="addNew.js"></script>
+    <script src="copyToClipboard.js"></script>
+    <script src="insertInTable.js"></script>
+    <script src="updateTable.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
