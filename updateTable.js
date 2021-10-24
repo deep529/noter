@@ -8,7 +8,7 @@ function updateTable() {
     var idAttribute = document.createAttribute("id");
     idAttribute.value = "main-tbody";
     newTableBody.setAttributeNode(idAttribute);
-        
+
     // get all data from chrome database and insert in table
     chrome.storage.local.get(null, function (data) {
         var index = 0;
