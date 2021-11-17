@@ -21,9 +21,13 @@ function insertInTable(tableBody, index, key, data) {
     
     // set image height
     var img_height = document.createAttribute("height");
-    img_height.value = "36px";
+    img_height.value = "24px";
     img.setAttributeNode(img_height);
-    
+
+    var img_desc = document.createAttribute("title");
+    img_desc.value = "delete"
+    img.setAttributeNode(img_desc);
+
     // image onclick
     img.onclick = function () {
         chrome.storage.local.remove(key, updateTable);
